@@ -5,6 +5,7 @@
 #include <stdio.h>
 
 #include "Diabla/Application.h"
+#include "Diabla/Log.h"
 
 // Entry Point
 

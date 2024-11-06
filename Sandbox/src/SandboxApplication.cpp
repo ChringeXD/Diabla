@@ -5,12 +5,12 @@ class Sandbox : public Diabla::Application
 public:
 	Sandbox()
 	{
-
+		
 	}
 
 	~Sandbox()
 	{
-
+		
 	}
 };
 
