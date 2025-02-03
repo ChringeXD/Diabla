@@ -4,6 +4,7 @@
 
 #include "Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace Diabla {
 
@@ -27,8 +28,8 @@ namespace Diabla {
 #define DB_CORE_INFO(...)    ::Diabla::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define DB_CORE_TRACE(...)   ::Diabla::Log::GetCoreLogger()->trace(__VA_ARGS__)
 
-#define DB_CLIENT_FATAL(...) ::Diabla::Log::GetClientLogger()->fatal(__VA_ARGS__)
-#define DB_CLIENT_ERROR(...) ::Diabla::Log::GetClientLogger()->error(__VA_ARGS__)
-#define DB_CLIENT_WARN(...)  ::Diabla::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define DB_CLIENT_INFO(...)  ::Diabla::Log::GetClientLogger()->info(__VA_ARGS__)
-#define DB_CLIENT_TRACE(...) ::Diabla::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define DB_FATAL(...) ::Diabla::Log::GetClientLogger()->fatal(__VA_ARGS__)
+#define DB_ERROR(...) ::Diabla::Log::GetClientLogger()->error(__VA_ARGS__)
+#define DB_WARN(...)  ::Diabla::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define DB_INFO(...)  ::Diabla::Log::GetClientLogger()->info(__VA_ARGS__)
+#define DB_TRACE(...) ::Diabla::Log::GetClientLogger()->trace(__VA_ARGS__)

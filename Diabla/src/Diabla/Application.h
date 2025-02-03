@@ -1,6 +1,8 @@
 #pragma once
 
-#include "core.h"
+#include "Core.h"
+
+#include "Events/Event.h"
 
 namespace Diabla {
 	class DIABLA_API Application
