@@ -1,9 +1,7 @@
 #pragma once
 
+#include "dbpch.h"
 #include "Core.h"
-
-#include <functional>
-#include <string>
 
 namespace Diabla {
 

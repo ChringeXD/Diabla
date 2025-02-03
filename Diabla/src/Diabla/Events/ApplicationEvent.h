@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Diabla {
 
 	class DIABLA_API WindowResizeEvent : public Event

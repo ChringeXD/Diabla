@@ -22,6 +22,9 @@ project "Diabla"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "dbpch.h"
+	pchsource "Diabla/src/dbpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
@@ -30,7 +33,7 @@ project "Diabla"
 
 	includedirs
 	{
-		"%{prj.name}/src"
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include"
 	}
 
@@ -84,8 +87,8 @@ project "Sandbox"
 
 	includedirs
 	{
-		"Diabla/vendor/spdlog/include",
-		"Diabla/src"
+		"Diabla/src",
+		"Diabla/vendor/spdlog/include"
 	}
 
 	links

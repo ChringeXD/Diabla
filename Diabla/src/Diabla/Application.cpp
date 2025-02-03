@@ -1,12 +1,10 @@
+#include "dbpch.h"
 #include "Application.h"
 
 #include "Events/ApplicationEvent.h"
 #include "Events/MouseEvent.h"
 #include "Events/KeyEvent.h"
 #include "Diabla/Log.h"
-
-#include <sstream>
-#include <iostream>
 
 namespace Diabla {
 

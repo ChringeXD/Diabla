@@ -4,6 +4,9 @@
     <Filter Include="Diabla">
       <UniqueIdentifier>{62BC20AE-4E5E-4B84-3719-5FD8235AD2D4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Diabla\Events">
+      <UniqueIdentifier>{06661E1F-7226-9A55-3B61-E3D2A7E0DE31}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Diabla.h" />
@@ -16,13 +19,22 @@
     <ClInclude Include="src\Diabla\EntryPoint.h">
       <Filter>Diabla</Filter>
     </ClInclude>
+    <ClInclude Include="src\Diabla\Events\ApplicationEvent.h">
+      <Filter>Diabla\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Diabla\Events\Event.h">
+      <Filter>Diabla\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Diabla\Events\KeyEvent.h">
+      <Filter>Diabla\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Diabla\Events\MouseEvent.h">
+      <Filter>Diabla\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Diabla\Log.h">
       <Filter>Diabla</Filter>
     </ClInclude>
-    <ClInclude Include="src\Diabla\Events\Event.h" />
-    <ClInclude Include="src\Diabla\Events\MouseEvent.h" />
-    <ClInclude Include="src\Diabla\Events\KeyEvent.h" />
-    <ClInclude Include="src\Diabla\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\dbpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Diabla\Application.cpp">
@@ -31,5 +43,6 @@
     <ClCompile Include="src\Diabla\Log.cpp">
       <Filter>Diabla</Filter>
     </ClCompile>
+    <ClCompile Include="src\dbpch.cpp" />
   </ItemGroup>
 </Project>
