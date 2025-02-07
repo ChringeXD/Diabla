@@ -10,8 +10,12 @@ workspace "Diabla"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Diabla/vendor/GLFW/include"
 
+include "Diabla/vendor/GLFW"
 
 
 project "Diabla"
@@ -34,12 +38,20 @@ project "Diabla"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib",
+		"dwmapi.lib"
 	}
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
+		staticruntime "off"
 		systemversion "latest"
 
 		defines
@@ -56,14 +68,21 @@ project "Diabla"
 		buildoptions "/utf-8"
 
 	filter "configurations:Debug"
-		defines "DB_DEBUG"
+		runtime "Debug"
+		defines 
+		{
+			"DB_DEBUG",
+			"DB_ENABLE_ASSERTS"
+		}
 		symbols "On"
 
 	filter "configurations:Release"
+		runtime "Release"
 		defines "DB_RELEASE"
 		optimize "On"
 
 	filter "configurations:Dist"
+		runtime "Release"
 		defines "DB_DIST"
 		optimize "On"
 
@@ -98,7 +117,7 @@ project "Sandbox"
 
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "On"
+		staticruntime "off"
 		systemversion "latest"
 
 		defines
@@ -109,10 +128,16 @@ project "Sandbox"
 		buildoptions "/utf-8"
 
 	filter "configurations:Debug"
-		defines "DB_DEBUG"
+		runtime "Debug"
+		defines 
+		{
+			"DB_DEBUG",
+			"DB_ENABLE_ASSERTS"
+		}
 		symbols "On"
 
 	filter "configurations:Release"
+		runtime "Release"
 		defines "DB_RELEASE"
 		optimize "On"
 

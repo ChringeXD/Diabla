@@ -1,3 +1,6 @@
 [submodule "Diabla/vendor/spdlog"]
 	path = Diabla/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Diabla/vendor/GLFW"]
+	path = Diabla/vendor/GLFW
+	url = https://github.com/TheCherno/glfw

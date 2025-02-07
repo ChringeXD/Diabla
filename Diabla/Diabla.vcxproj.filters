@@ -7,6 +7,12 @@
     <Filter Include="Diabla\Events">
       <UniqueIdentifier>{06661E1F-7226-9A55-3B61-E3D2A7E0DE31}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Diabla.h" />
@@ -34,6 +40,12 @@
     <ClInclude Include="src\Diabla\Log.h">
       <Filter>Diabla</Filter>
     </ClInclude>
+    <ClInclude Include="src\Diabla\Window.h">
+      <Filter>Diabla</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\dbpch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\Diabla\Log.cpp">
       <Filter>Diabla</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\dbpch.cpp" />
   </ItemGroup>

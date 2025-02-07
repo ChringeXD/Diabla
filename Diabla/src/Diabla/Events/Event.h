@@ -1,7 +1,7 @@
 #pragma once
 
 #include "dbpch.h"
-#include "Core.h"
+#include "Diabla/Core.h"
 
 namespace Diabla {
 
@@ -72,6 +72,10 @@ namespace Diabla {
 	private:
 		Event& m_Event;
 	};
+
+	inline std::ostream& operator<<(std::ostream& os, const Event& e) {
+		return os << e.ToString();
+	}
 
 	inline std::string format_as(const Event& e) {
 		return e.ToString();
