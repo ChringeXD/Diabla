@@ -40,7 +40,7 @@ namespace Diabla {
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss << "MouseMovedEvent: " << m_Offset;
+			ss << "MouseScrolledEvent: " << m_Offset;
 			return ss.str();
 		}
 
