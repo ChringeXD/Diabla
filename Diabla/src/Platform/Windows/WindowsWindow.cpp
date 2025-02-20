@@ -5,6 +5,8 @@
 #include "Diabla/Events/KeyEvent.h"
 #include "Diabla/Events/MouseEvent.h"
 
+#include <GLAD/glad.h>
+
 namespace Diabla {
 
 	static bool s_GLFWInitialized = false;
@@ -49,6 +51,8 @@ namespace Diabla {
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, props.Title.c_str(), NULL, NULL);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		DB_CORE_ASSERT(status, "Failed to initialize GLAD.");
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 

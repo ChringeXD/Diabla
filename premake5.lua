@@ -13,8 +13,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 
 IncludeDir = {}
+IncludeDir["GLAD"] = "Diabla/vendor/GLAD/include"
 IncludeDir["GLFW"] = "Diabla/vendor/GLFW/include"
 
+include "Diabla/vendor/GLAD"
 include "Diabla/vendor/GLFW"
 
 
@@ -39,11 +41,13 @@ project "Diabla"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLAD}",
 		"%{IncludeDir.GLFW}"
 	}
 
 	links
 	{
+		"GLAD",
 		"GLFW",
 		"opengl32.lib",
 		"dwmapi.lib"
@@ -57,7 +61,8 @@ project "Diabla"
 		defines
 		{
 			"DB_PLATFORM_WINDOWS",
-			"DB_BUILD_DLL"
+			"DB_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
