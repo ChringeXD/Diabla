@@ -1,6 +1,8 @@
 workspace "Diabla"
 	architecture "x64"
 
+	startproject "Sandbox"
+
 	configurations
 	{
 		"Debug",
@@ -15,10 +17,11 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLAD"] = "Diabla/vendor/GLAD/include"
 IncludeDir["GLFW"] = "Diabla/vendor/GLFW/include"
+IncludeDir["ImGui"] = "Diabla/vendor/imgui"
 
 include "Diabla/vendor/GLAD"
 include "Diabla/vendor/GLFW"
-
+include "Diabla/vendor/imgui"
 
 project "Diabla"
 	location "Diabla"
@@ -42,13 +45,15 @@ project "Diabla"
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLAD}",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links
 	{
 		"GLAD",
 		"GLFW",
+		"ImGui",
 		"opengl32.lib",
 		"dwmapi.lib"
 	}
@@ -67,7 +72,7 @@ project "Diabla"
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox\"")
 		}
 
 		buildoptions "/utf-8"

@@ -10,6 +10,10 @@
 	#error Diabla only supports Windows.
 #endif
 
+#ifdef DB_DEBUG
+	#define DB_ENABLE_ASSERTS
+#endif
+
 #ifdef DB_ENABLE_ASSERTS
 	#define DB_ASSERT(x, ...) { if(!(x)) { DB_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 	#define DB_CORE_ASSERT(x, ...) { if(!(x)) { DB_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
@@ -19,4 +23,6 @@
 #endif
 
 #define BIT(x) (1 << x)
+
+#define BIND_EVENT_FN(x) std::bind(&x, this, std::placeholders::_1)
 

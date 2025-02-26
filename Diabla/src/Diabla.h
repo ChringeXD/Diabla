@@ -5,6 +5,7 @@
 #include "Diabla/Application.h"
 #include "Diabla/Layer.h"
 #include "Diabla/Log.h"
+#include "Diabla/ImGui/ImGuiLayer.h"
 
 // Entry Point
 

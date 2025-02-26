@@ -6,11 +6,6 @@ public:
 	ExampleLayer()
 		: Layer("ExampleLayer") {}
 
-	void OnUpdate() override
-	{
-		DB_INFO("ExampleLayer::Update()");
-	}
-
 	void OnEvent(Diabla::Event& e) override
 	{
 		DB_TRACE(e);
@@ -23,6 +18,7 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Diabla::ImGuiLayer());
 	}
 
 	~Sandbox()
