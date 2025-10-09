@@ -6,9 +6,20 @@ public:
 	ExampleLayer()
 		: Layer("ExampleLayer") {}
 
-	void OnEvent(Diabla::Event& e) override
+	void OnUpdate() override
 	{
-		DB_TRACE(e);
+		if (Diabla::Input::GetKeyDown(DB_KEY_TAB))
+			DB_TRACE("Tab is pressd! (poll)");
+	}
+
+	void OnEvent(Diabla::Event& event) override
+	{
+		if (event.GetEventType() == Diabla::EventType::KeyPressed)
+		{
+			Diabla::KeyPressedEvent& e = (Diabla::KeyPressedEvent&)event;
+			if(e.GetKeyCode() == DB_KEY_TAB)
+				DB_TRACE("Tab is pressd! (event)");
+		}
 	}
 };
 

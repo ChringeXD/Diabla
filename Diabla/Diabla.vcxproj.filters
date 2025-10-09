@@ -71,6 +71,8 @@
       <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\dbpch.h" />
+    <ClInclude Include="src\Diabla\KeyCodes.h" />
+    <ClInclude Include="src\Diabla\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Diabla\Application.cpp">

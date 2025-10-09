@@ -5,6 +5,11 @@
 #include "Diabla/Application.h"
 #include "Diabla/Layer.h"
 #include "Diabla/Log.h"
+
+#include "Diabla/Input.h"
+#include "Diabla/KeyCodes.h"
+#include "Diabla/MouseButtonCodes.h"
+
 #include "Diabla/ImGui/ImGuiLayer.h"
 
 // Entry Point
