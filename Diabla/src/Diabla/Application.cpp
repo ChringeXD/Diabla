@@ -5,6 +5,7 @@
 #include "Events/MouseEvent.h"
 #include "Events/KeyEvent.h"
 
+#include "Input.h"
 
 #include <GLAD/glad.h> 
 

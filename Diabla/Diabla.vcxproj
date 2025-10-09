@@ -164,11 +164,13 @@
     <ClInclude Include="src\Diabla\Events\KeyEvent.h" />
     <ClInclude Include="src\Diabla\Events\MouseEvent.h" />
     <ClInclude Include="src\Diabla\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Diabla\Input.h" />
     <ClInclude Include="src\Diabla\Layer.h" />
     <ClInclude Include="src\Diabla\LayerStack.h" />
     <ClInclude Include="src\Diabla\Log.h" />
     <ClInclude Include="src\Diabla\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\dbpch.h" />
   </ItemGroup>
@@ -179,6 +181,7 @@
     <ClCompile Include="src\Diabla\LayerStack.cpp" />
     <ClCompile Include="src\Diabla\Log.cpp" />
     <ClCompile Include="src\Platform\OpenGL\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\dbpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

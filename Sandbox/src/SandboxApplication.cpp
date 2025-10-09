@@ -19,6 +19,8 @@ public:
 	{
 		PushLayer(new ExampleLayer());
 		PushOverlay(new Diabla::ImGuiLayer());
+
+		DB_TRACE(Input::GetMouseX())
 	}
 
 	~Sandbox()
