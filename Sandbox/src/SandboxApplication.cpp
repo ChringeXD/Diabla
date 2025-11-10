@@ -1,4 +1,5 @@
 #include <Diabla.h>
+#include <glm/glm.hpp>
 
 class ExampleLayer : public Diabla::Layer
 {

@@ -8,6 +8,7 @@
 #include "Input.h"
 
 #include <GLAD/glad.h> 
+#include <glm/glm.hpp>
 
 
 namespace Diabla {
